@@ -14,8 +14,8 @@ def print_battle():
     print("="*20)
 
 
-jolly = mon.JollyRancher(5,"OwO",100,50,5)
-other = mon.JollyRancher(5,name="Enemy Jolly")
+jolly = mon.JollyRancher(5,"OwO")
+other = mon.JollyRancher(5,"Enemy Jolly")
 
 
 ##jollymon = JollyRancher(5,"OwO",100,50,5)

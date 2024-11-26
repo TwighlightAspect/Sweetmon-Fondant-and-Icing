@@ -34,7 +34,7 @@ class Trainer:
 
 
     def __str__(self):
-        return "\n"+self.name+"\n\n"+str(self.activeind+1)+"/"+str(len(self.sweetmon))+" "+str(self.active)+"\n"
+        return "\n"+self.name+" "+str(self.active.level)+"\n\n"+str(self.active)+"\n"+str(self.activeind+1)+"/"+str(len(self.sweetmon))
 
-    def __format__(self):
-        return "\n"+self.name+"\n\n"+str(self.activeind+1)+"/"+str(len(self.sweetmon))+" "+str(self.active)+"\n"
+    # def __format__(self):
+    #     return "\n"+self.name+"\n\n"+str(self.activeind+1)+"/"+str(len(self.sweetmon))+" "+str(self.active)+"\n"
