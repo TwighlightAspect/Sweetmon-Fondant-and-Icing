@@ -1,6 +1,8 @@
 import time
 
-def typing_print(text, end="\n",speed=1):
+speed = 5
+
+def typing_print(text, end="\n"):
     for i in text:
         print(i,end="")
         time.sleep(0.1/speed)
