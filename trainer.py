@@ -2,17 +2,21 @@ import monsters as mon
 import sweetUI as ui
 
 class Trainer:
-    def __init__(self,name,sweetmon = list(), bag = list(), has_starter=False):
+    def __init__(self,name,sweetmon = list(), bag = list(), has_starter=False, pc = list()):
         self.sweetmon = sweetmon
         self.bag = bag
         
-        self.active = mon.Mon(0)
+        self.active = None
+        if len(self.sweetmon) > 0:
+            self.active = sweetmon[0]
+        
         self.activeind = 0
         self.name = name
         
         self.takenaction = False
         
-        self.pc = list()
+        self.pc = pc
+        print (self.active)
         
             
 
@@ -41,7 +45,8 @@ class Trainer:
     # def Action(self):
     #     if self.takenaction == True:
     #         return None
-        
+    def Has_Sweetmon(self):
+        return self.active != None and len(self.sweetmon) > 0
 
     def Remove_Sweetmon(self,sweetnum = -2):
         self.sweetmon.pop(sweetnum+1)
