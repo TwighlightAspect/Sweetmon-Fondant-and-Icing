@@ -3,6 +3,9 @@ class Battle:
         """(Battle,Trainer,Trainer) -> None
         
         Initilizes a battle"""
+        if player1.Has_Sweetmon()==False or player2.Has_Sweetmon() == False:
+            raise IndexError("One or both players have not Sweetmon to battle with.")
+        
         self.states = {"player1","player2","player1_win","player2_win"}
         self.currstate = "player1"
         
